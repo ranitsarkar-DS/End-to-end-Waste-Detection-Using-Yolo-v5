@@ -1,10 +1,7 @@
-from wasteDetection.exception import AppException
-from wasteDetection.logger import logging
-import sys
+from wasteDetection.pipeline.training_pipeline import TrainPipeline
 
-try:
-    a = 3 / "s"
-except Exception as e:
-    raise AppException(e,sys)
+obj = TrainPipeline()
+obj.run_pipeline()
+
 
 
